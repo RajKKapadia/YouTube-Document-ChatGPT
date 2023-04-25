@@ -81,4 +81,5 @@ with gr.Blocks() as demo:
     clear_btn.click(lambda: None, None, chatbot, queue=False)
 
 if __name__ == '__main__':
+    demo.queue(concurrency_count=3)
     demo.launch()
