@@ -10,7 +10,7 @@ load_dotenv()
 
 def create_index(file_path: str) -> None:
 
-    reader = PdfReader('sample.pdf')
+    reader = PdfReader(file_path)
     text = ''
     for page in reader.pages:
         text += page.extract_text()
@@ -47,3 +47,5 @@ def create_index(file_path: str) -> None:
     )
 
     vectordb.persist()
+
+create_index('sample.pdf')

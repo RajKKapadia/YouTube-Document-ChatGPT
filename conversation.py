@@ -35,6 +35,4 @@ def create_conversation() -> ConversationalRetrievalChain:
         verbose=True
     )
 
-    qa
-
     return qa
